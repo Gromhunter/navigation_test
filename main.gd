@@ -19,7 +19,7 @@ func _on_reload_room_pressed():
 	parent.add_child(child)
 
 func _on_reload_tilemap_pressed():
-	var child=get_tree().get_root().get_node("root/level/room/navigation/Tilemap")
+	var child=get_tree().get_root().get_node("root/level/room/navigation/TileMap")
 	var parent=get_tree().get_root().get_node("root/level/room/navigation")
 	parent.remove_child(child)
 	parent.add_child(child)
