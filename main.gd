@@ -35,3 +35,16 @@ func _on_reload_navigation_pressed():
 func _on_reload_pressed():
 	for i in get_node("level").get_children():
 		i.queue_free()
+
+
+func _on_reload_navv_pressed():
+	var child=get_tree().get_root().get_node("root/level/room/navigation/navv")
+	var parent=get_tree().get_root().get_node("root/level/room/navigation")
+	parent.remove_child(child)
+	parent.add_child(child)
+
+
+
+func _on_delete_random_cell_pressed():
+	randomize()
+	get_tree().get_root().get_node("root/level/room/navigation/TileMap").set_cell(6+randi()%15,2+randi()%8,-1)	

@@ -114,6 +114,22 @@ shortcut = null
 text = "Unparent tilemap node, and add it again as a child of the same node"
 flat = false
 
+[node name="delete_random_cell" type="Button" parent="GUI"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 548.0
+margin/top = 13.0
+margin/right = 996.0
+margin/bottom = 51.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "delete random cell"
+flat = false
+
 [connection signal="pressed" from="GUI/load_room" to="." method="_on_load_room_pressed"]
 
 [connection signal="pressed" from="GUI/reload" to="." method="_on_reload_pressed"]
@@ -123,5 +139,7 @@ flat = false
 [connection signal="pressed" from="GUI/reload_navigation" to="." method="_on_reload_navigation_pressed"]
 
 [connection signal="pressed" from="GUI/reload_tilemap" to="." method="_on_reload_tilemap_pressed"]
+
+[connection signal="pressed" from="GUI/delete_random_cell" to="." method="_on_delete_random_cell_pressed"]
 
 
